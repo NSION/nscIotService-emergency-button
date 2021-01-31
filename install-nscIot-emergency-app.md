@@ -7,10 +7,10 @@
 
 ## Install Raspberry python development specific tools and libraries 
 
-**Raspberry python development kit:**
+**RPi python development kit:**
 
 ```sudo apt-get install python-dev```
 
-**Raspberry RPi.GPIO:**
+**RPi.GPIO:**
 
 ```sudo apt-get install python-rpi.gpio```
