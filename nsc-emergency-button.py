@@ -16,15 +16,15 @@ def switchon(ev=None):
     else: 
         print('Broadcasting on\r')
         requests.post('http://localhost:8091/nscIotService/media/live/start')
-        
+
 def loop():
     GPIO.add_event_detect(BtnPin1, GPIO.FALLING, callback=switchon, bouncetime=300)
     while True:
         pass   
-    
+
 def destroy():
         GPIO.cleanup() 
-        
+
 if __name__ == '__main__':     # Program start from here
     setup()
     try:
