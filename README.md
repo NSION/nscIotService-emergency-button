@@ -14,8 +14,8 @@ RestAPI is responding at localhost:809x port of IOT client server.
 
 | Path | Request params | Response | Description |
 | :--- |     :---      |   :---  |       :---  |
-| POST /media/live/start | { incidentNumber: STRING, // task id, patrolId: STRING, // patrol id } | text/plain 200: "Started live" 400: "Bad params"  | Start live streaming |
-| POST /media/video POST /media/clip | { incidentNumber: STRING, // task id, patrolId: STRING // patrol id, fullPath: STRING // path to image on disk, timeStampStart: LONG, // epoch time in milliseconds, timeStampEnd: LONG // epoch time in milliseconds }     | 200: "Send clip {fullPath}", 400: "Bad params" / "Upload buffer full" | Video clip send  |
+| POST /media/live/start | { incidentNumber: STRING // task id, patrolId: STRING // patrol id } | text/plain 200: "Started live" 400: "Bad params"  | Start live streaming |
+| POST /media/video POST /media/clip | { incidentNumber: STRING // task id, patrolId: STRING // patrol id, fullPath: STRING // path to image on disk, timeStampStart: LONG, // epoch time in milliseconds, timeStampEnd: LONG // epoch time in milliseconds }     | 200: "Send clip {fullPath}", 400: "Bad params" / "Upload buffer full" | Video clip send  |
 | POST /media/image | { incidentNumber: STRING, // task id, patrolId: STRING // patrol id, fullPath: STRING // path to image on disk captured, TimeStamp: LONG // epoch time in milliseconds } | 200: "Send image {fullPath}", 400: "Bad params" / "Upload buffer full"  | Single image send  |
 | POST /inputsource/select/{id} | id (from input source/list)     | 200: ok  | Select input source  |
 | POST /media/live/end | -     | text/plain 200: "End live"  | End live streaming  |
