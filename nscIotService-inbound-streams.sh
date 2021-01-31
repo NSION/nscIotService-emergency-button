@@ -9,8 +9,6 @@ find $workdir -type f | sort -n  | while read -r line ;
 		rtsp=$(sed -n 's/.*\(rtsp.*\).*/\1/p' $line;)
 		url=$(echo $rtsp | sed 's/[\]//g';)
 		id=$(echo $line | sed 's/.*\(.\)$/\1/';)
-		printf "camera$id: $url \n"; 
+		printf "camera$id, Port:809$id, RTSP URL:$url \n"; 
 	done
 echo ""
-#( echo cat $file | sed -n 's/.*\(rtsp.*\).*/\1/p' 
-# more docker-compose.yml | grep container_name | sed -n 's/.*\(nsciotservice.\).*/\1/p'
