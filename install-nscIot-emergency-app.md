@@ -32,7 +32,7 @@ git clone https://github.com/NSION/nscIotService-emergency-button.git
 ```
 Grant execute permission for shell scripts:
 ```text
-cd nscIotService-emergency-button
+cd ~nscIotService-emergency-button
 chmod u+x *.sh
 ```
 
@@ -40,7 +40,7 @@ chmod u+x *.sh
 
 List camera sources:
 ```text
-cd nscIotService-emergency-button
+cd ~nscIotService-emergency-button
 ./nscIotService-inbound-streams.sh
 ```
 As an example printout:
