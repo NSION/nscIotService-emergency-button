@@ -55,6 +55,8 @@ else:
    print('Broadcasting on\r')
    requests.post('http://localhost:8091/nscIotService/media/live/start')
 ```
+Save changes ```<ctrl>``` button and X, "Y" Yes, and ENTER
+
 ### test functionality
 ``` sudo python3 nsc-emergency-button.py ```
 
