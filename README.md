@@ -12,7 +12,7 @@ Deployment specific repository of [nscIotService-docker](https://github.com/NSIO
 nscIotService API service is located on edge computer. The IotClient API is designed to offer management interface for an external application like Car dashboard application where the corresponding dashboard UI could control basic functionalities regarding media broadcasting operations.
 RestAPI is responding at localhost:809x port of IOT client server.
 
-| Path | Request params | Response | Description |
+| *** Path *** | *** Request params *** | *** Response *** | *** Description *** |
 | :--- |     :---      |   :---  |       :---  |
 | POST /media/live/start | { incidentNumber: STRING // task id, patrolId: STRING // patrol id } | text/plain 200: "Started live" 400: "Bad params"  | Start live streaming |
 | POST /media/video POST /media/clip | { incidentNumber: STRING // task id, patrolId: STRING // patrol id, fullPath: STRING // path to image on disk, timeStampStart: LONG // epoch time in milliseconds, timeStampEnd: LONG // epoch time in milliseconds }     | 200: "Send clip {fullPath}", 400: "Bad params" / "Upload buffer full" | Video clip send  |
