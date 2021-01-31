@@ -7,4 +7,4 @@ Deployment specific repository of [nscIotService-docker](https://github.com/NSIO
 
 <img src="https://github.com/NSION/nscIotService-emergency-button/blob/main/nscIotService-API-example1.png" width="800" height="500">
 
-|Path|Request params|Response|Description|
+| Path | Request params | Response | Description |
