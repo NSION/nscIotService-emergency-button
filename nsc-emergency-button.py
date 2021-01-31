@@ -19,7 +19,7 @@ def switchon(ev=None):
         requests.post('http://localhost:8091/nscIotService/media/live/start')
 
 def loop():
-    GPIO.add_event_detect(BtnPin1, GPIO.FALLING, callback=switchon, bouncetime=300)
+    GPIO.add_event_detect(BtnPin1, GPIO.FALLING, callback=switchon, bouncetime=250)
     while True:
         pass   
 
