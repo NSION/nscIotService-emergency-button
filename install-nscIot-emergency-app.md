@@ -6,6 +6,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
 - [x] Raspberry Pi 4 with 4GB RAM
 - [x] [nscIotService](https://github.com/NSION/nscIotService-docker/blob/main/Installation-nscIotService.md) is installed
+- [x] Python3 installed on RPi. (enabled by default in RPi OS distros)
 
 ## Install Raspberry python development specific tools and libraries 
 
