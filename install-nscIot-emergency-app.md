@@ -26,30 +26,36 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
 ### Download python code
 
-```cd~ ```
-
-```git clone https://github.com/NSION/nscIotService-emergency-button.git ```
+```text
+cd~
+git clone https://github.com/NSION/nscIotService-emergency-button.git 
+```
 
 ### Define route between button and video stream
 
-```cd nscIotService-emergency-button ```
-
-```nano nsc-emergency-button.py```
+```text
+cd nscIotService-emergency-button
+nano nsc-emergency-button.py
+```
 
 Define GPIO pin number of button
 
 ``` BtnPin1 = 23    # pin23 --- button1 ```
 
 Define port number of corresponding Broadcast containers 809X, X Number 1 = camera1
-As an example Camera1.
-```text
-    if GPIO.input(BtnPin1):     # if port BtnPin1 == 1  
-        print('Broadcasting off\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/end')  
-    else: 
-        print('Broadcasting on\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/start')
-        ```
 
+As an example Camera1 > Port 8091
+
+```text
+
+if GPIO.input(BtnPin1):     # if port BtnPin1 == 1  
+   print('Broadcasting off\r')
+   requests.post('http://localhost:8091/nscIotService/media/live/end')  
+else: 
+   print('Broadcasting on\r')
+   requests.post('http://localhost:8091/nscIotService/media/live/start')
+```
+### test functionality
+``` sudo python3 nsc-emergency-button.py ```
 
 
