@@ -16,10 +16,10 @@ RestAPI is responding at localhost:809x port of IOT client server.
 | :--- |     :---      |   :---  |       :---  |
 | POST /media/live/start | { incidentNumber: STRING, // task id, patrolId: STRING, // patrol id } | text/plain 200: "Started live" 400: "Bad params"  | Start live streaming |
 | POST /media/video POST /media/clip | { incidentNumber: STRING, // task id, patrolId: STRING, // patrol id, fullPath: STRING, // path to image on disk, timeStampStart: LONG, // epoch time in milliseconds, timeStampEnd: LONG // epoch time in milliseconds }     | 200: "Send clip {fullPath}", 400: "Bad params" / "Upload buffer full" | Video clip send  |
-| POST /media/image | { incidentNumber: STRING, // task id, patrolId: STRING, // patrol id, fullPath: STRING, // path to image on disk captured, TimeStamp: LONG // epoch time in milliseconds } | 200: "Send image {fullPath}", 400: "Bad params" / "Upload buffer full"  | Single image send  |
-| POST /inputsource/select/{id} |     :---:      |   :---:  |       ---:  |
-| POST /media/live/end |     :---:      |   :---:  |       ---:  |
-| GET /inputsource/list |     :---:      |   :---:  |       ---:  |
-| GET /status/streaming |     :---:      |   :---:  |       ---:  |
-| GET /status/uploadStatus |     :---:      |   :---:  |       ---:  |
-| GET /status/buffer |     :---:      |   :---:  |       ---:  |
+| POST /media/image | { incidentNumber: STRING, // task id, patrolId: STRING // patrol id, fullPath: STRING // path to image on disk captured, TimeStamp: LONG // epoch time in milliseconds } | 200: "Send image {fullPath}", 400: "Bad params" / "Upload buffer full"  | Single image send  |
+| POST /inputsource/select/{id} | id (from input source/list)     | 200: ok  | Select input source  |
+| POST /media/live/end | -     | text/plain 200: "End live"  | End live streaming  |
+| GET /inputsource/list | -    | 200: ok APPLICATION_JSON: { "sources": [{"id":"xx", "type":"yyy", "name":"zzz", "description":"kkkk"} ]}  | Retrieve list of available sources  |
+| GET /status/streaming | - | { liveStreaming: "active" / "inactive", connectionStatus: "connected" / "disconnected"}  | Live streaming status  |
+| GET /status/uploadStatus | - | { tasksInQueue: INTEGER }  | Upload task status, number of tasks in upload queue  |
+| GET /status/buffer | - | 200: ok APPLICATION_JSON { "bufferFillPercentage":0}  | Retrieve upload buffer status  |
