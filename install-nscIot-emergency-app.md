@@ -1,6 +1,6 @@
 # NSC-IOT Emergency button app:
 
-Installation instruction for NSC-IOT Emergency button Python app
+Installation instruction for "NSC-IOT Emergency button" Python app. 
 
 ## Prerequisites
 
