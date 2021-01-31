@@ -90,7 +90,7 @@ sudo nano /etc/rc.local
 Add following line at the end of configuration file.
 ```text
 
-sudo python3 /home/pi//home/pi/nscIotService-emergency-button/nsc-emergency-button.py &
+sudo python3 /home/pi/nscIotService-emergency-button/nsc-emergency-button.py &
 exit 0
 ```
 Reboot the Pi to test it:
