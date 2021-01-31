@@ -9,16 +9,16 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
 ## Install Raspberry python development specific tools and libraries 
 
-**Log into RPi via ssh or local terminal:**
+- **Log into RPi via ssh or local terminal:**
 
-**Update repository:**
+- **Update repository:**
 
 ```sudo apt-get update```
 
-**RPi python development kit:**
+- **RPi python development kit:**
 
 ```sudo apt-get install python-dev```
 
-**RPi.GPIO:**
+- **RPi.GPIO:**
 
 ```sudo apt-get install python-rpi.gpio```
