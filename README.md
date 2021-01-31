@@ -7,6 +7,9 @@ Deployment specific repository of [nscIotService-docker](https://github.com/NSIO
 ## Workflow: GPIO pinouts to API
 <img src="https://github.com/NSION/nscIotService-emergency-button/blob/main/nscIotService-API-example1.png" width="800" height="480">
 
+### API Reference implementation "nsc-emergency-button.py" application
+[Installation instructions of "nsc-emergency-button" app](https://github.com/NSION/nscIotService-emergency-button/blob/main/install-nscIot-emergency-app.md)
+
 ## API specifications:
 ### NSC3 IOT client API specification:
 nscIotService API service is located on edge computer. The IotClient API is designed to offer management interface for an external application like Car dashboard application where the corresponding dashboard UI could control basic functionalities regarding media broadcasting operations.
