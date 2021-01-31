@@ -32,7 +32,7 @@ git clone https://github.com/NSION/nscIotService-emergency-button.git
 ```
 Grant execute permission for shell scripts:
 ```text
-cd ~/nscIotService-emergency-button
+cd nscIotService-emergency-button
 chmod u+x *.sh
 ```
 
@@ -40,7 +40,7 @@ chmod u+x *.sh
 
 List camera sources:
 ```text
-cd ~/nscIotService-emergency-button
+cd nscIotService-emergency-button
 ./nscIotService-inbound-streams.sh
 ```
 As an example printout:
@@ -53,7 +53,7 @@ Camera2, Port:8092, RTSP URL:rtsp://user:passwd@192.168.1.214:88/videoMain
 ```
 Modify Python script:
 ```text
-cd ~/nscIotService-emergency-button
+cd nscIotService-emergency-button
 nano nsc-emergency-button.py
 ```
 
@@ -79,4 +79,21 @@ Save changes ```<ctrl>``` button and X, "Y" Yes, and ENTER
 ### test functionality
 ``` sudo python3 nsc-emergency-button.py ```
 
+Status of broadcasting is displayed on screen..
 
+### Run a Program On Your Raspberry Pi At Startup
+
+```text
+sudo nano /etc/rc.local
+```
+
+Add following line at the end of configuration file.
+```text
+
+sudo python3 /home/pi//home/pi/nscIotService-emergency-button/nsc-emergency-button.py &
+exit 0
+```
+Reboot the Pi to test it:
+```text
+sudo reboot
+```
