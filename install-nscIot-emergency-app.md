@@ -87,8 +87,9 @@ Status of broadcasting is displayed on screen..
 sudo nano /etc/rc.local
 ```
 
-Add following line at the end of configuration file.
+Add following line at the end of configuration file. Before ```exit 0``` tag
 ```text
+....
 
 sudo python3 /home/pi/nscIotService-emergency-button/nsc-emergency-button.py &
 exit 0
