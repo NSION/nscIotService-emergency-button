@@ -5,7 +5,7 @@ This software repository is intended to familiarize usage of the nscIotService A
 
 Deployment specific repository of [nscIotService-docker](https://github.com/NSION/nscIotService-docker). Covering instruction to install nscIotService into Raspberry Pi 4 platform.
 ## Workflow: GPIO pinouts to API
-<img src="https://github.com/NSION/nscIotService-emergency-button/blob/main/nscIotService-API-example1.png" width="800" height="500">
+<img src="https://github.com/NSION/nscIotService-emergency-button/blob/main/nscIotService-API-example1.png" width="800" height="480">
 
 ## API specifications:
 ### NSC3 IOT client API specification:
@@ -14,7 +14,7 @@ RestAPI is responding at localhost:809x port of IOT client server.
 
 | Path | Request params | Response | Description |
 | :--- |     :---:      |   :---:  |       ---:  |
-| POST /media/live/start | {
+|POST /media/live/start | {
 incidentNumber: STRING, // task id
 patrolId: STRING, // patrol id
 }      | text/plain
