@@ -6,3 +6,5 @@ This software repository is intended to familiarize usage of the nscIotService A
 Deployment specific repository of [nscIotService-docker](https://github.com/NSION/nscIotService-docker). Covering instruction to install nscIotService into Raspberry Pi 4 platform.
 
 <img src="https://github.com/NSION/nscIotService-emergency-button/blob/main/nscIotService-API-example1.png" width="800" height="500">
+
+|Path|Request params|Response|Description|
