@@ -13,4 +13,4 @@
 
 **Raspberry RPi.GPIO:**
 
-```sudo apt-get install python-rpi.gpio
+```sudo apt-get install python-rpi.gpio```
