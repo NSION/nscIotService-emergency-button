@@ -1,8 +1,9 @@
 # NSC-IOT Emergency button app:
 
 ## Prerequisites
--[x] Raspberry Pi 4 with 4GB RAM
--[x] [nscIotService](https://github.com/NSION/nscIotService-docker/blob/main/Installation-nscIotService.md) is installed
+
+- [x] Raspberry Pi 4 with 4GB RAM
+- [x] [nscIotService](https://github.com/NSION/nscIotService-docker/blob/main/Installation-nscIotService.md) is installed
 
 ## Install Raspberry python development specific tools and libraries 
 
