@@ -27,9 +27,11 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 ### Download python code
 
 ```cd~ ```
+
 ```git clone https://github.com/NSION/nscIotService-emergency-button.git ```
 
 ### Define route between button and video stream
 
 ```cd nscIotService-emergency-button ```
+
 ```nano 
