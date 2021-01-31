@@ -23,3 +23,12 @@ RestAPI is responding at localhost:809x port of IOT client server.
 | GET /status/streaming | - | { liveStreaming: "active" / "inactive", connectionStatus: "connected" / "disconnected"}  | Live streaming status  |
 | GET /status/uploadStatus | - | { tasksInQueue: INTEGER }  | Upload task status, number of tasks in upload queue  |
 | GET /status/buffer | - | 200: ok APPLICATION_JSON { "bufferFillPercentage":0}  | Retrieve upload buffer status  |
+
+As example: Curl command to start and stop streaming:
+Start: ```curl -X POST http://localhost:8091/nscIotService/media/live/start```
+Stop: ```curl -X POST http://localhost:8091/nscIotService/media/live/stop```
+
+As example: wget command to get status of broadcasting:
+```wget -qO- http://localhost:8091/nscIotService/status/streaming```
+
+
