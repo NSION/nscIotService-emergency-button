@@ -28,7 +28,7 @@ As example: Curl command to start and stop streaming:
 
 Start: ```curl -X POST http://localhost:8091/nscIotService/media/live/start```
 
-Stop: ```curl -X POST http://localhost:8091/nscIotService/media/live/stop```
+Stop: ```curl -X POST http://localhost:8091/nscIotService/media/live/end```
 
 As example: wget command to get status of broadcasting:
 
