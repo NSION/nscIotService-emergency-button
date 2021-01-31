@@ -34,4 +34,22 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
 ```cd nscIotService-emergency-button ```
 
-```nano 
+```nano nsc-emergency-button.py```
+
+Define GPIO pin number of button
+
+``` BtnPin1 = 23    # pin23 --- button1 ```
+
+Define port number of corresponding Broadcast containers 809X, X Number 1 = camera1
+As an example Camera1.
+```text
+    if GPIO.input(BtnPin1):     # if port BtnPin1 == 1  
+        print('Broadcasting off\r')
+        requests.post('http://localhost:8091/nscIotService/media/live/end')  
+    else: 
+        print('Broadcasting on\r')
+        requests.post('http://localhost:8091/nscIotService/media/live/start')
+        ```
+
+
+
