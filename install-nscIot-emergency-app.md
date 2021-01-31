@@ -7,6 +7,10 @@
 
 ## Install Raspberry python development specific tools and libraries 
 
+**Update repository:**
+
+```sudo apt-get update```
+
 **RPi python development kit:**
 
 ```sudo apt-get install python-dev```
