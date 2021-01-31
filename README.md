@@ -14,12 +14,12 @@ RestAPI is responding at localhost:809x port of IOT client server.
 
 | Path | Request params | Response | Description |
 | :--- |     :---:      |   :---:  |       ---:  |
-|POST /media/live/start | {
+|```POST /media/live/start``` | ```{
 incidentNumber: STRING, // task id
 patrolId: STRING, // patrol id
-}      | text/plain
+}```      | ```text/plain
 200: "Started live"
-400: "Bad params"  | Start live streaming  |
+400: "Bad params"```  | ```Start live streaming```  |
 | :--- |     :---:      |   :---:  |       ---:  |
 | :--- |     :---:      |   :---:  |       ---:  |
 | :--- |     :---:      |   :---:  |       ---:  |
