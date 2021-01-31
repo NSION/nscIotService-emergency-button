@@ -9,6 +9,6 @@ find $workdir -type f | sort -n  | while read -r line ;
 		rtsp=$(sed -n 's/.*\(rtsp.*\).*/\1/p' $line;)
 		url=$(echo $rtsp | sed 's/[\]//g';)
 		id=$(echo $line | sed 's/.*\(.\)$/\1/';)
-		printf "camera$id, Port:809$id, RTSP URL:$url \n"; 
+		printf "Camera$id, Port:809$id, RTSP URL:$url \n"; 
 	done
 echo ""
