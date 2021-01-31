@@ -30,19 +30,34 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 cd~
 git clone https://github.com/NSION/nscIotService-emergency-button.git 
 ```
+Grant execute permission for shell scripts:
+```text
+cd nscIotService-emergency-button
+chmod u+x *.sh
+```
 
 ### Define route between button and video stream
 
+List camera sources:
+```text
+cd nscIotService-emergency-button
+./nscIotService-inbound-streams.sh
+```
+As an example printout:
+```text
+
+```
+Modify Python script:
 ```text
 cd nscIotService-emergency-button
 nano nsc-emergency-button.py
 ```
 
-Define GPIO pin number of button
+Define GPIO pin number of button:
 
 ``` BtnPin1 = 23    # pin23 --- button1 ```
 
-Define port number of corresponding Broadcast containers 809X, X Number 1 = camera1
+Define corresponding port number:
 
 As an example Camera1 > Port 8091
 
