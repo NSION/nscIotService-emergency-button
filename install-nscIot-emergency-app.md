@@ -45,7 +45,11 @@ cd nscIotService-emergency-button
 ```
 As an example printout:
 ```text
+*************************************************************
+List of rtsp url addresses configured per camera: 
 
+Camera1, Port:8091, RTSP URL:rtsp://nsion:!NSION!2020#@192.168.1.213:88/videoMain 
+Camera2, Port:8092, RTSP URL:rtsp://nsion:!NSION!2020#@192.168.1.213:88/videoMain 
 ```
 Modify Python script:
 ```text
