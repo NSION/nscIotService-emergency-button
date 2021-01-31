@@ -8,7 +8,7 @@ Deployment specific repository of [nscIotService-docker](https://github.com/NSIO
 <img src="https://github.com/NSION/nscIotService-emergency-button/blob/main/nscIotService-API-example1.png" width="800" height="480">
 
 ### API Reference implementation "nsc-emergency-button.py" application
-[Installation instructions of "nsc-emergency-button" app](https://github.com/NSION/nscIotService-emergency-button/blob/main/install-nscIot-emergency-app.md)
+- [Installation instructions of "nsc-emergency-button" application](https://github.com/NSION/nscIotService-emergency-button/blob/main/install-nscIot-emergency-app.md)
 
 ## API specifications:
 ### NSC3 IOT client API specification:
