@@ -32,7 +32,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    ```
    Grant execute permission for shell scripts:
    ```text
-   cd nscIotService-emergency-button
+   cd ~/nscIotService-emergency-button
    chmod u+x *.sh
    ```
 
