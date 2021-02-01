@@ -75,8 +75,9 @@ As an example printout:
    Save changes ```<ctrl>``` button and X, "Y" Yes, and ENTER
 
 ### test functionality
-   ``` sudo python3 nsc-emergency-button.py ```
-
+   ```text 
+   sudo python3 nsc-emergency-button.py 
+   ```
    Status of broadcasting is displayed on screen.
 
 ### Run a Program On Your Raspberry Pi At Startup
