@@ -2,13 +2,13 @@
 
 Installation instruction for "NSC-IOT Emergency button" Python app. 
 
-### Prerequisites
+### Prerequisites:
 
 - [x] Raspberry Pi 4 with 4GB RAM
 - [x] [nscIotService](https://github.com/NSION/nscIotService-docker/blob/main/Installation-nscIotService.md) is installed
 - [x] Python3 installed on RPi. (enabled by default in RPi OS specific distros)
 
-### Install Raspberry python development specific tools and libraries 
+### Install Raspberry python development specific tools and libraries:
 
 - **Log into RPi via ssh or local terminal as pi user:**
 
@@ -24,7 +24,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
    ```sudo apt-get install python-rpi.gpio```
 
-### Download the repository
+### Download the repository:
    
    ```text
    cd~
@@ -36,7 +36,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    chmod u+x *.sh
    ```
 
-### Define route between button and video stream
+### Define route between button and video stream:
 
 - **List camera sources:**
    ```text
@@ -85,7 +85,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    ```
    Status of broadcasting is displayed on screen.
 
-### Run a Program On Your Raspberry Pi At Startup
+### Run a Program On Your Raspberry Pi At Startup:
 - **Configure run level conf:** 
    ```text
    sudo nano /etc/rc.local
