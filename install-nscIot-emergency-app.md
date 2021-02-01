@@ -40,7 +40,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    cd nscIotService-emergency-button
    ./nscIotService-inbound-streams.sh
    ```
-As an example printout:
+   As an example printout:
    ```text
    *************************************************************
    List of rtsp url addresses configured per camera: 
