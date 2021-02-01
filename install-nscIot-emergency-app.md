@@ -40,7 +40,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
 - **List camera sources:**
    ```text
-   cd nscIotService-emergency-button
+   cd ~/nscIotService-emergency-button
    ./nscIotService-inbound-streams.sh
    ```
    As an example printout:
@@ -53,7 +53,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    ```
 - **Modify Python script:**
    ```text
-   cd nscIotService-emergency-button
+   cd ~/nscIotService-emergency-button
    nano nsc-emergency-button.py
    ```
 - **Define GPIO pin number of button as BCM layout format:**
