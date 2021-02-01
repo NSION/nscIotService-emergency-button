@@ -7,7 +7,7 @@ BtnPin1 = 4    # pin4 --- button1
 
 def setup():
     GPIO.setmode(GPIO.BCM)       # GPIO Layoyt BCM
-    GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_UP)    # Set BtnPin's mode is input, and pull up to high level(3.3V)
+    GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)    # Set BtnPin's mode is input, and pull up to high level(3.3V)
     GPIO.setwarnings(False)
 
 def switchon(ev=None):
