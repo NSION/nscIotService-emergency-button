@@ -22,7 +22,6 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    ```sudo apt-get install python-rpi.gpio```
 
 ### Download the repository
-
    ```text
    cd~
    git clone https://github.com/NSION/nscIotService-emergency-button.git 
