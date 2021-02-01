@@ -24,7 +24,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
    ```sudo apt-get install python-rpi.gpio```
    
-- **Installing pip for Python 3 and **
+- **Installing pip for Python 3 **
 
    Ubuntu 18.04 ships with Python 3, as the default Python installation. Complete the following steps to install pip (pip3) for Python 3:
 
