@@ -56,7 +56,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    cd nscIotService-emergency-button
    nano nsc-emergency-button.py
    ```
-- **Define GPIO pin number of button:**
+- **Define GPIO pin number of button as BCM layout format:**
 
    ``` BtnPin1 = 23    # pin23 --- button1 ```
 
