@@ -7,7 +7,7 @@ BtnPin1 = 4    # pin4 --- button1
 
 def setup():
     GPIO.setmode(GPIO.BCM)       # GPIO Layoyt BCM
-    GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)    # Set BtnPin's mode is input, and pull up to high level(3.3V)
+    GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)    # Set BtnPin's mode is input, and pull down to low level(0V)
     GPIO.setwarnings(False)
 
 def switchon(ev=None):
@@ -16,10 +16,15 @@ def switchon(ev=None):
         requests.post('http://localhost:8091/nscIotService/media/live/start')
     else: 
         print('Broadcasting off\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/end')  
+        requests.post('http://localhost:8091/nscIotService/media/live/end')
+        GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         
 def loop():
     GPIO.add_event_detect(BtnPin1, GPIO.RISING, callback=switchon, bouncetime=250)
+    if not GPIO.input(BtnPin1):
+        requests.post('http://localhost:8091/nscIotService/media/live/end')
+        GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)    
+    
     while True:
         pass   
 
