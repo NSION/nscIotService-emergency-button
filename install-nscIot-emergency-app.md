@@ -26,11 +26,11 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
 ### Download the repository
 
-```text
+   ```text
    cd~
-git clone https://github.com/NSION/nscIotService-emergency-button.git 
-```
-Grant execute permission for shell scripts:
+   git clone https://github.com/NSION/nscIotService-emergency-button.git 
+   ```
+   Grant execute permission for shell scripts:
    ```text
    cd nscIotService-emergency-button
    chmod u+x *.sh
@@ -56,7 +56,6 @@ As an example printout:
    cd nscIotService-emergency-button
    nano nsc-emergency-button.py
    ```
-
 - **Define GPIO pin number of button:**
 
    ``` BtnPin1 = 23    # pin23 --- button1 ```
