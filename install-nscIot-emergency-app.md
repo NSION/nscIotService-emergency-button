@@ -24,7 +24,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
 ```sudo apt-get install python-rpi.gpio```
 
-### Download python code
+### Download the repository
 
 ```text
 cd~
@@ -38,7 +38,7 @@ chmod u+x *.sh
 
 ### Define route between button and video stream
 
-List camera sources:
+- **List camera sources:**
 ```text
 cd nscIotService-emergency-button
 ./nscIotService-inbound-streams.sh
@@ -51,17 +51,19 @@ List of rtsp url addresses configured per camera:
 Camera1, Port:8091, RTSP URL:rtsp://user:passwd@192.168.1.213:88/videoMain 
 Camera2, Port:8092, RTSP URL:rtsp://user:passwd@192.168.1.214:88/videoMain 
 ```
-Modify Python script:
+- **Modify Python script:**
 ```text
 cd nscIotService-emergency-button
 nano nsc-emergency-button.py
 ```
 
-Define GPIO pin number of button:
+- **Define GPIO pin number of button:**
 
 ``` BtnPin1 = 23    # pin23 --- button1 ```
 
-Define corresponding port number:
+More details about [BCM GPIO pin layout](https://pinout.xyz/)
+
+- **Define the corresponding port number:**
 
 As an example Camera1 > Port 8091
 
@@ -79,10 +81,10 @@ Save changes ```<ctrl>``` button and X, "Y" Yes, and ENTER
 ### test functionality
 ``` sudo python3 nsc-emergency-button.py ```
 
-Status of broadcasting is displayed on screen..
+Status of broadcasting is displayed on screen.
 
 ### Run a Program On Your Raspberry Pi At Startup
-
+- **Configure run level conf:** 
 ```text
 sudo nano /etc/rc.local
 ```
@@ -94,7 +96,7 @@ Add following line at the end of configuration file. Before ```exit 0``` tag
 sudo python3 /home/pi/nscIotService-emergency-button/nsc-emergency-button.py &
 exit 0
 ```
-Reboot the Pi to test it:
+- **Reboot the Pi to test it:**
 ```text
 sudo reboot
 ```
