@@ -10,8 +10,8 @@ def setup():
     GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)    # Set BtnPin's mode is input, and pull down to low level(0V)
     GPIO.setwarnings(False)
 
-def switchon(ev=None):
-    if GPIO.input(BtnPin1):     # if port BtnPin1 == 1  
+def switch(ev=None):
+    if not GPIO.input(BtnPin1):     # if port BtnPin1 == 1  
         print('Broadcasting on\r')
         requests.post('http://localhost:8091/nscIotService/media/live/start')
     else: 
@@ -20,11 +20,8 @@ def switchon(ev=None):
         GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         
 def loop():
-    GPIO.add_event_detect(BtnPin1, GPIO.RISING, callback=switchon, bouncetime=250)
-    if not GPIO.input(BtnPin1):
-        requests.post('http://localhost:8091/nscIotService/media/live/end')
-        GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)    
-    
+    GPIO.add_event_detect(BtnPin1, GPIO.RISING, callback=switch, bouncetime=250)  
+    GPIO.add_event_detect(BtnPin1, GPIO.FALLING, callback=switch, bouncetime=250)    
     while True:
         pass   
 
