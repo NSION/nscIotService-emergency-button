@@ -19,8 +19,7 @@ def loop():
     if GPIO.add_event_detect(BtnPin1, GPIO.FALLING): 
         print('Broadcasting off\r')
         requests.post('http://localhost:8091/nscIotService/media/live/end')    
-        
-     while True:
+    while True:
         pass   
 
 def destroy():
