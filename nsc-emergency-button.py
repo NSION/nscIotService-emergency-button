@@ -11,17 +11,16 @@ def setup():
     GPIO.setwarnings(False)
 
 def switch(ev=None):
-    if not GPIO.input(BtnPin1):     # if port BtnPin1 == 1  
-        print('Broadcasting on\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/start')
-    else: 
-        print('Broadcasting off\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/end')
-        GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+    print('Broadcasting on\r')
+    requests.post('http://localhost:8091/nscIotService/media/live/start')
         
 def loop():
     GPIO.add_event_detect(BtnPin1, GPIO.RISING, callback=switch, bouncetime=250)    
-    while True:
+    if GPIO.add_event_detect(BtnPin1, GPIO.FALLING): 
+        print('Broadcasting off\r')
+        requests.post('http://localhost:8091/nscIotService/media/live/end')    
+        
+     while True:
         pass   
 
 def destroy():
