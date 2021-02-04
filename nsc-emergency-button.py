@@ -20,8 +20,7 @@ def switch(ev=None):
         GPIO.setup(BtnPin1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         
 def loop():
-    GPIO.add_event_detect(BtnPin1, GPIO.RISING, callback=switch, bouncetime=250)  
-    GPIO.add_event_detect(BtnPin1, GPIO.FALLING, callback=switch, bouncetime=250)    
+    GPIO.add_event_detect(BtnPin1, GPIO.RISING, callback=switch, bouncetime=250)    
     while True:
         pass   
 
