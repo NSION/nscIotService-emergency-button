@@ -12,11 +12,11 @@ def setup():
 
 def switch(channel):
     if GPIO.input(BtnPin1):
-        print('Broadcasting off\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/end')
-    if not GPIO.input(BtnPin1):
         print('Broadcasting on\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/start')        
+        requests.post('http://localhost:8091/nscIotService/media/live/start')
+    if not GPIO.input(BtnPin1):
+        print('Broadcasting off\r')
+        requests.post('http://localhost:8091/nscIotService/media/live/end')        
 def loop():
     GPIO.add_event_detect(BtnPin1, GPIO.BOTH, callback=switch, bouncetime=250)    
     while True:
