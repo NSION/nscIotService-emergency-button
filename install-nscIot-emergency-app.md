@@ -112,7 +112,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    sudo nano /etc/rc.local
    ```
 
-   Add following line at the end of configuration file. Before ```exit 0``` tag
+   Add following lines at the end of configuration file. Before the ```exit 0``` line.
    ```text
    ....
    sleep 30
