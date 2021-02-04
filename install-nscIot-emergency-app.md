@@ -108,13 +108,14 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 ### Run a Program On Your Raspberry Pi At Startup:
 - **Configure run level conf:** 
    ```text
+   sudo chmod +x /etc/rc.local
    sudo nano /etc/rc.local
    ```
 
    Add following line at the end of configuration file. Before ```exit 0``` tag
    ```text
    ....
-
+   sleep 30
    sudo python3 /home/pi/nscIotService-emergency-button/nsc-emergency-button.py &
    exit 0
    ```
