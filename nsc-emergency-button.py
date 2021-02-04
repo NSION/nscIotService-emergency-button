@@ -16,9 +16,8 @@ def switch(channel):
         requests.post('http://localhost:8091/nscIotService/media/live/end')
     if not GPIO.input(BtnPin1):
         print('Broadcasting on\r')
-        requests.post('http://localhost:8091/nscIotService/media/live/start')
-        
- def loop():
+        requests.post('http://localhost:8091/nscIotService/media/live/start')        
+def loop():
     GPIO.add_event_detect(BtnPin1, GPIO.BOTH, callback=switch, bouncetime=250)    
     while True:
         pass   
