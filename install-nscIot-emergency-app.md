@@ -40,7 +40,7 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
    
    Install RPI GPIO PIP Module:
    
-   ``` sudo pip install RPi.GPIO ```
+   ``` sudo pip3 install RPi.GPIO ```
    
    
 
