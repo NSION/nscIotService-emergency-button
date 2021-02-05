@@ -88,12 +88,13 @@ Installation instruction for "NSC-IOT Emergency button" Python app.
 
    ```text
    
-   if GPIO.input(BtnPin1):     # if port BtnPin1 == 1  
-      print('Broadcasting off\r')
-      requests.post('http://localhost:8091/nscIotService/media/live/end')  
-   else: 
-      print('Broadcasting on\r')
-      requests.post('http://localhost:8091/nscIotService/media/live/start')
+  def switch(channel):
+    if GPIO.input(BtnPin1):
+        print('Broadcasting on\r')
+        requests.post('http://localhost:8091/nscIotService/media/live/start')
+    if not GPIO.input(BtnPin1):
+        print('Broadcasting off\r')
+        requests.post('http://localhost:8091/nscIotService/media/live/end')   
    ```
    Save changes ```<ctrl>``` button and X, "Y" Yes, and ENTER
 
