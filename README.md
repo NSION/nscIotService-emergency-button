@@ -26,6 +26,9 @@ RestAPI is responding at localhost:809x port of IOT client server.
 | GET /status/streaming | - | { liveStreaming: "active" / "inactive", connectionStatus: "connected" / "disconnected"}  | Live streaming status  |
 | GET /status/uploadStatus | - | { tasksInQueue: INTEGER }  | Upload task status, number of tasks in upload queue  |
 | GET /status/buffer | - | 200: ok APPLICATION_JSON { "bufferFillPercentage":0}  | Retrieve upload buffer status  |
+| GET /location | - | { "latitude": DOUBLE "longitude": DOUBLE}  | Retrieve current configured or posted location  |
+| POST /location | { "latitude": DOUBLE "longitude": DOUBLE} | - | Update the current location. Range: latitude (-90 to 90) and longitude (-180 to 180) |
+
 
 As example: Curl command to start and stop streaming:
 
